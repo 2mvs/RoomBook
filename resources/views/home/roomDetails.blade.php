@@ -9,7 +9,7 @@
 
 
     <div class="h-[40vh] w-full bg-cover bg-no-repeat bg-center relative"
-        style="background-image: url('{{ asset('images/room2.jpg') }}');">
+        style="background-image: url('{{ asset('images/room2.jpg') }}')">
         <div class="absolute inset-0 bg-black opacity-50"></div>
         <div class="relative z-10 flex items-center justify-center h-full">
             <h1 class="text-white text-4xl mt-10 font-bold">Détail de la salle</h1>

@@ -7,7 +7,7 @@
         <form action="{{ route('room.post') }}" method="POST" class="flex flex-col space-y-3 bg-white p-4 shadow-sm"
             enctype="multipart/form-data">
             @csrf
-            <div class="grid grid-cols-2 gap-4">
+            <div class="grid grid-cols-3 gap-4">
                 <div class="flex flex-col gap-1">
                     <label for="name"
                         class="text-sm text-neutral-600 {{ $errors->has('name') ? 'text-red-500 font-medium' : '' }}">Libelle</label>
@@ -21,6 +21,12 @@
                             <option value="{{ $category->id }}">{{ $category->name }}</option>
                         @endforeach
                     </select>
+                </div>
+                <div class="flex flex-col gap-1">
+                    <label for="name"
+                        class="text-sm text-neutral-600 {{ $errors->has('price') ? 'text-red-500 font-medium' : '' }}">Prix</label>
+                    <input type="text" id="price" name="price" placeholder="10 000" value="{{ old('price') }}"
+                        class="text-sm text-neutral-600 rounded-md p-2 border outline-none {{ $errors->has('price') ? 'border-red-500' : 'border-gray-300' }}">
                 </div>
                 
             </div>

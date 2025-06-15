@@ -20,7 +20,7 @@ class ReservationController extends Controller
             'check_in' => 'required|date|after_or_equal:today',
             'check_out' => 'required|date|after:start_date',
         ]);
-        // Check if the room is available for the selected dates
+        
         $existingReservation = Reservation::where('room_id', $request->room_id)
             ->where(function ($query) use ($request) {
                 $query->whereBetween('check_in', [$request->check_in, $request->check_out])

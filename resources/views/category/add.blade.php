@@ -11,7 +11,7 @@
                 <div class="flex flex-col gap-1">
                     <label for="name"
                         class="text-sm text-neutral-600 {{ $errors->has('name') ? 'text-red-500 font-medium' : '' }}">Libelle</label>
-                    <input type="text" id="name" name="name" placeholder="Beau Lieu" value="{{ old('name') }}"
+                    <input type="text" id="name" name="name" placeholder="Conférence" value="{{ old('name') }}"
                         class="text-sm text-neutral-600 rounded-md p-2 border outline-none {{ $errors->has('name') ? 'border-red-500' : 'border-gray-300' }}">
                 </div>   
             </div>

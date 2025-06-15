@@ -30,6 +30,7 @@ class RoomController extends Controller
             'name' => 'required|string|max:255',
             'category_id' => 'required|integer',
             'location' => 'required|string|max:255',
+            'price'=> 'required|numeric|min:0',
             'capacity' => 'required|integer|min:1',
             'description' => 'nullable|string|min:3',
             'images.*' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
@@ -40,6 +41,7 @@ class RoomController extends Controller
             'name' => $request->name,
             'category_id' => $request->category_id,
             'location' => $request->location,
+            'price'=> $request->price,
             'capacity' => $request->capacity,
             'description' => $request->description,
             'status' => $request->status,
@@ -72,6 +74,7 @@ class RoomController extends Controller
        $datas = $request->validate([
             'name' => 'required|string|max:255',
             'location' => 'required|string|max:255',
+            'price'=> 'nullable|numeric|min:0',
             'capacity' => 'required|integer|min:1',
             'description' => 'nullable|string|min:3',
             'status' => 'required|string'
